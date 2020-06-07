@@ -1,0 +1,53 @@
+@import "../../../../css/consts.scss";
+.report-block-wrapper {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.report-block-suspicious {
+  cursor: pointer;
+  height: 24px;
+  background-color: $colorGrey100;
+  color: $colorActive;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  img {
+    width: 22px;
+    height: 22px;
+    margin-right: 24px;
+  }
+}
+
+.report-block-suspicious-count {
+  display: flex;
+
+  button {
+    background-color: $colorGrey300;
+    border: 0px;
+    margin-right: 4px;
+    border-radius: 0px;
+    cursor: pointer;
+  }
+  span {
+    background-color: $colorReportAccent;
+    padding: 4px;
+  }
+}
+.report-block-advice {
+  width: 100%;
+  align-items: center;
+  color: $colorWarning;
+  font-weight: 500;
+}
+
+.main-screen-wrapper {
+  background-color: $colorLowerBackground;
+}
+.main-screen-block {
+  margin: 6px;
+  padding: 6px;
+  background-color: $colorBackground;
+}

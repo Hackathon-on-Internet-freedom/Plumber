@@ -1,0 +1,40 @@
+{
+  "name": "plumber-chrome-extension",
+  "version": "0.0.1",
+  "description": "plumber is a chrome extension that allows user to monitor data breaches on different sites",
+  "scripts": {
+    "build": "node utils/build.js",
+    "start": "node utils/webserver.js"
+  },
+  "dependencies": {
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.4",
+    "@babel/preset-react": "7.7.4",
+    "@bem-react/classname": "^1.5.8",
+    "@types/chrome": "^0.0.114",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "3.0.0",
+    "copy-webpack-plugin": "5.0.5",
+    "css-loader": "3.2.0",
+    "file-loader": "4.3.0",
+    "fs-extra": "8.1.0",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "3.2.0",
+    "node-sass": "^4.14.1",
+    "react-hot-loader": "4.12.18",
+    "react-svg-loader": "^3.0.3",
+    "sass-loader": "^8.0.2",
+    "style-loader": "1.0.0",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0",
+    "write-file-webpack-plugin": "4.5.1"
+  }
+}

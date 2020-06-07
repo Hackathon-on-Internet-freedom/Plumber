@@ -1,0 +1,64 @@
+@import "../../../../css/consts.scss";
+
+.breach-domain {
+  color: $colorHeader;
+  font-size: 24px;
+  margin-left: 12px;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+.breach-row-wrapper {
+  margin-left: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: $colorTextRegular;
+}
+.breach-row-exposed-title {
+  height: 14px;
+  padding: 4px;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.breach-row-breached {
+  height: 22px;
+  align-items: center;
+  display: flex;
+}
+.breach-row-status {
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+.breach-status {
+  margin-left: 12px;
+  color: $colorTextRegular;
+}
+
+.breach-row-exposed-wrapper {
+  max-height: 22px;
+  overflow: hidden;
+  background-color: $colorLowerBackground;
+  &_show {
+    max-height: 500px;
+    overflow: visible;
+  }
+  transition: all 0.3s ease;
+}
+.breach-row-exposed-data-class {
+  padding: 4px;
+}
+.breach-row-status_color {
+  &_red {
+    color: $colorWarning;
+  }
+  &_yellow {
+    color: $colorReportAccent;
+  }
+  &_grey {
+    color: $colorHeader;
+  }
+}

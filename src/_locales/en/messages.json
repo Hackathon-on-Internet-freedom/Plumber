@@ -1,0 +1,37 @@
+{
+  "goBackButton": {
+    "message": "Back"
+  },
+  "reportsBlockSuspicious": {
+    "message": "Does this site looks suspicious?"
+  },
+  "reportsBlockSuspiciousCount": {
+    "message": "suspicious reports"
+  },
+  "reportsBlockAdvice": {
+    "message": "We do not recommend to leave sensitive information on this site. You can press +1 button to report this site"
+  },
+
+  "breachesUnknown": {
+    "message": "breaches unknown"
+  },
+  "breachesHidden": {
+    "message": "no new breaches"
+  },
+
+  "breachRowBreached": {
+    "message": "breached"
+  },
+  "breachRowExposed": {
+    "message": "What has been exposed?"
+  },
+  "breachStatusretired": { "message": "retired" },
+  "breachStatusfabricated": { "message": "fabricated" },
+  "breachStatusverified": { "message": "verified" },
+  "breachStatusunverified": { "message": "unverified" },
+  "breachStatusspamlist": { "message": "spamlist" },
+
+  "emailFormHasEmailBreached": {
+    "message": "Was my e-mail breached?"
+  }
+}
