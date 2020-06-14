@@ -13,14 +13,19 @@ export interface PopupData {
   email: string;
   saveEmail: boolean;
   emailBreaches: string[];
+  reportLevel: ReportLevel | "";
 }
-export interface PopupActions {}
+export type ReportLevel = "warning" | "danger" | "ok" | "owner" | "initial";
+export interface PopupActions {
+  removeEmail: () => void;
+}
 
-export type PopupState = PopupData;
+export type PopupState = PopupData & PopupActions;
 export const usePopupData = (): PopupState => {
+  const reportLevel = useState<PopupData["reportLevel"]>("warning");
   const domain = useState<PopupData["domain"]>("");
   const reports = useState<PopupData["reports"]>([]);
-  const window = useState<PopupData["window"]>("main");
+  const window = useState<PopupData["window"]>("reports");
   const breaches = useState<PopupData["breaches"]>([]);
   const hiddenBreaches = useState<PopupData["hiddenBreaches"]>([]);
   const email = useState<PopupData["email"]>("");
@@ -28,6 +33,7 @@ export const usePopupData = (): PopupState => {
   const emailBreaches = useState<PopupData["emailBreaches"]>([]);
 
   const stateObj = stateToObject<PopupData>({
+    reportLevel,
     reports,
     domain,
     window,
@@ -35,7 +41,7 @@ export const usePopupData = (): PopupState => {
     hiddenBreaches,
     email,
     saveEmail,
-    emailBreaches,
+    emailBreaches
   });
 
   const objectWithMethods = bindMethods<PopupData, PopupActions>(

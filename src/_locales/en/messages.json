@@ -9,7 +9,71 @@
     "message": "suspicious reports"
   },
   "reportsBlockAdvice": {
-    "message": "We do not recommend to leave sensitive information on this site. You can press +1 button to report this site"
+    "message": "We do not recommend leaving your data here or downloading any files!"
+  },
+  "reportsBlockWarningText": {
+    "message": "Suspicious behaviour reported"
+  },
+  "reportsBlockReportText": {
+    "message": "Warnings of danger"
+  },
+  "reportsBlockReportButtonText": {
+    "message": "add report"
+  },
+  "reportBlockOwnerForm": {
+    "message": "Is this your site? Contact us!"
+  },
+
+  "reportFormTitleIowner": {
+    "message": "Why does this site look suspicious?"
+  },
+  "reportFormTitleIwarning": {
+    "message": "Why does this site look suspicious?"
+  },
+  "reportFormTitleIdanger": {
+    "message": "Why does this site look suspicious?"
+  },
+  "reportFormTitleIok": {
+    "message": "Why does this site look suspicious?"
+  },
+  "reportFormTitleIinitial": {
+    "message": "Why does this site look suspicious?"
+  },
+
+  "reportFormPlaceholderIowner": {
+    "message": "Please, provide the proofs you have"
+  },
+  "reportFormPlaceholderIwarning": {
+    "message": "Please, provide the proofs you have"
+  },
+  "reportFormPlaceholderIdanger": {
+    "message": "Please, provide the proofs you have"
+  },
+  "reportFormPlaceholderIinitial": {
+    "message": "Please, provide the proofs you have"
+  },
+  "reportFormPlaceholderIok": {
+    "message": "Please, provide the proofs you have"
+  },
+
+  "reportFormSubmitIok": {
+    "message": "Report"
+  },
+  "reportFormSubmitIwarning": {
+    "message": "Report"
+  },
+  "reportFormSubmitIdanger": {
+    "message": "Report"
+  },
+  "reportFormSubmitIowner": {
+    "message": "Report"
+  },
+  "reportFormSubmitIinitial": {
+    "message": "Report"
+  },
+
+  "breachesDifferentDomains": {
+    "message": "Different sources"
   },
 
   "breachesUnknown": {
@@ -33,5 +97,20 @@
 
   "emailFormHasEmailBreached": {
     "message": "Was my e-mail breached?"
+  },
+  "emailFormNoNewBreaches": {
+    "message": "There is no breaches"
+  },
+  "emailFormNewBreachesDetected": {
+    "message": "New breach detected"
+  },
+  "emailFormCheck": {
+    "message": "Check"
+  },
+  "emailFormShowBreaches": {
+    "message": "Show all breaches"
+  },
+  "emailFormRememberMe": {
+    "message": "Remember me"
   }
 }

@@ -2,6 +2,9 @@ export const useChromeStorage = <T>(params: {
   key: string | [string];
   useSync?: boolean;
 }) => {
+  if (!chrome) {
+    return;
+  }
   const storage = params.useSync ? chrome.storage.sync : chrome.storage.local;
 
   const get = (callback: (data: T) => void) =>

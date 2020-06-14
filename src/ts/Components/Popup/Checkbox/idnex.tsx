@@ -1,5 +1,4 @@
 import * as React from "react";
-import { cn } from "@bem-react/classname";
 import "./checkbox.scss";
 
 interface CheckboxProps {
@@ -7,18 +6,30 @@ interface CheckboxProps {
   text?: string;
   checked: boolean;
 }
-const checkbox = cn("checkbox");
+
+import { cn } from "@bem-react/classname";
 export const Checkbox = (
   props: React.PropsWithChildren<CheckboxProps>
 ): React.FunctionComponentElement<React.PropsWithChildren<CheckboxProps>> => {
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const checkbox = cn("checkbox");
+  const onChange = (e: any) => {
     props.onChange(e.target.checked);
   };
-  const key = "checkbox";
+  const key = Math.random()
+    .toString(32)
+    .slice(3, 7);
   return (
-    <label className="switchSmall2 m5">
-      <input type="checkbox" checked={props.checked} onChange={onChange} />
-      <small></small>
-    </label>
+    <div className={checkbox("wrapper")}>
+      <input
+        id={key}
+        type="checkbox"
+        checked={props.checked}
+        onChange={onChange}
+        className={checkbox()}
+      />
+      <label htmlFor={key} className={checkbox("label")}>
+        <span>{props.text || props.children || ""}</span>
+      </label>
+    </div>
   );
 };

@@ -1,0 +1,113 @@
+@import "../../../../../css/consts.scss";
+.report-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.report-block-suspicious {
+  cursor: pointer;
+  height: 24px;
+  background-color: $colorGrey100;
+  color: $colorActive;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  img {
+    width: 22px;
+    height: 22px;
+    margin-right: 24px;
+  }
+}
+
+.main-screen-wrapper {
+  background-color: $colorLowerBackground;
+}
+.main-screen-block {
+  background-color: $colorBackground;
+  margin: 8px;
+}
+
+.report-block-danger-wrapper {
+  background-color: $colorGrey900;
+  padding-bottom: 16px;
+}
+.report-block-advice {
+  color: $colorBackground;
+  margin: 6px 12px;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+}
+
+.report-block-report-row {
+  margin: 6px 0px;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  border: 0px;
+  height: 32px;
+  align-items: center;
+
+  &_type_warning {
+    background: linear-gradient(
+      90deg,
+      rgba($colorReportAccent, 0.6) 0%,
+      $colorGrey900 90%
+    );
+    &:hover {
+      background: linear-gradient(
+        90deg,
+        rgba($colorReportAccent, 0.8) 0%,
+        $colorGrey900 90%
+      );
+    }
+  }
+
+  &_type_danger {
+    background: linear-gradient(
+      90deg,
+      rgba($colorWarning, 0.6) 0%,
+      $colorGrey900 90%
+    );
+    &:hover {
+      background: linear-gradient(
+        90deg,
+        rgba($colorWarning, 0.8) 0%,
+        $colorGrey900 90%
+      );
+    }
+  }
+}
+.report-block-exclamation {
+  opacity: 1;
+  color: $colorBackground;
+  font-weight: 800;
+  font-size: 18px;
+  margin: 0px 20px;
+}
+.report-block-report-description {
+  color: $colorBackground;
+  font-size: 12;
+  letter-spacing: 0.4;
+  width: 220px;
+  text-align: left;
+}
+.report-block-row-button {
+  font-weight: 500;
+  &_type_warning {
+    color: $colorReportAccent;
+  }
+  &_type_danger {
+    color: $colorWarning;
+  }
+}
+.report-block-site-owner {
+  color: $colorActive;
+  align-self: center;
+  margin: 4px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}

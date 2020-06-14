@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
-import icon from "../../img/icon-128.png";
+import React from "react";
 
 import { cn } from "@bem-react/classname";
-import { DataBreach } from "../../types";
-import { getBreachesByEmail, getDomainReports } from "../../utils/api";
-import { useChromeStorage } from "../../utils/hooks/storage";
+
 import { BreachScreen } from "./Breaches";
 import { usePopupData, PopupData } from "./data/data";
 import { MainScreen } from "./MainScreen";
@@ -21,26 +18,6 @@ const router: {
 };
 
 export const Popup: React.FC = () => {
-  const msg = chrome.i18n.getMessage;
-  const [showBreaches, setShowBreaches] = useState(false);
-  const [getSyncEmail, setSyncEmail] = useChromeStorage<{ email: string }>({
-    key: "email",
-    useSync: true,
-  });
-  useEffect(() => {
-    getSyncEmail((res) => setEmail(res.email));
-    getStorageBreaches((res) => setBreaches(res.breaches));
-  }, []);
-
-  const [getStorageBreaches, setStorageBreaches] = useChromeStorage<{
-    breaches: DataBreach[];
-  }>({ key: "breaches" });
-
-  const [email, setEmail] = useState("");
-  const [saveEmail, setSaveEmail] = useState(true);
-
-  const [breaches, setBreaches] = useState<DataBreach[]>([]);
-
   const data = usePopupData();
 
   return (

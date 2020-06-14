@@ -1,0 +1,35 @@
+@import "../../../../css/consts.scss";
+
+.report-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.report-form-title {
+  color: $colorHeader;
+  font-size: 24px;
+  margin: 16px;
+}
+.report-form-input {
+  width: 400px;
+  height: 100px;
+  &::placeholder {
+    text-align: center;
+  }
+}
+.report-form-submit {
+  background-color: $colorButton;
+  margin-top: 16px;
+  border: 0px;
+  padding: 4px 12px;
+  color: $colorBackground;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}

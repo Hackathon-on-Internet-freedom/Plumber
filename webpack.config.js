@@ -61,7 +61,7 @@ var options = {
         loader: "html-loader",
         exclude: /node_modules/,
       },
-      { test: /\.tsx?$/, loader: "ts-loader" },
+      { test: /\.tsx?$/, loader: ["ts-loader"] },
       {
         test: /\.svg$/,
         exclude: [/node_modules/, /inline/],

@@ -1,5 +1,21 @@
 @import "../../../../css/consts.scss";
 
+// .breach-wrapper {
+//   margin: px;
+// }
+// .breach-wrapper::after {
+//   content: "";
+//   display: block;
+//   // width: 100%;
+//   margin: 6px;
+//   border-bottom: 1px solid $colorGrey300;
+// }
+// .breach-wrapper:last-of-type {
+//   &::after {
+//     border: 0px;
+//   }
+// }
+
 .breach-domain {
   color: $colorHeader;
   font-size: 24px;
@@ -9,7 +25,7 @@
   }
 }
 .breach-row-wrapper {
-  margin-left: 12px;
+  margin: 2px 12px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -18,20 +34,22 @@
 .breach-row-exposed-title {
   height: 14px;
   padding: 4px;
-  align-items: center;
   display: flex;
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .breach-row-breached {
+  width: 120px;
   height: 22px;
   align-items: center;
   display: flex;
 }
 .breach-row-status {
+  width: 60px;
   height: 22px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .breach-status {
   margin-left: 12px;
@@ -39,6 +57,7 @@
 }
 
 .breach-row-exposed-wrapper {
+  width: 160px;
   max-height: 22px;
   overflow: hidden;
   background-color: $colorLowerBackground;
@@ -56,9 +75,13 @@
     color: $colorWarning;
   }
   &_yellow {
-    color: $colorReportAccent;
+    color: $colorSpam;
   }
   &_grey {
     color: $colorHeader;
   }
+}
+
+.breach-page {
+  margin: 8px;
 }

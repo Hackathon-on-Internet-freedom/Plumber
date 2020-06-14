@@ -1,0 +1,68 @@
+@import "../../../../../css/consts.scss";
+
+.email-form-wrapper {
+  margin: 8px 0px;
+  .checkbox-wrapper {
+    margin-left: 8px;
+  }
+}
+
+.email-form-header-content {
+  margin-left: 12px;
+  font-size: 24px;
+  &_type_danger {
+    color: $colorWarning;
+  }
+  &_type_ok {
+    color: $colorOk;
+  }
+  &_type_blank {
+    color: $colorTitle;
+  }
+}
+.email-form-smile {
+  color: $colorTitle;
+}
+.email-form-breaches {
+  //   margin: 8px;
+}
+.email-form-email-input {
+  margin-left: 8px;
+}
+.email-form-show-breach-button {
+  margin-left: 32px;
+  background-color: $colorButton;
+  border: 0px;
+  color: $colorBackground;
+  font-weight: 600;
+  padding: 3px 12px;
+}
+.email-form-email-row {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  // justify-content: space-around;
+}
+.email-form-saved-email-row {
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.email-form-remove-email {
+  cursor: pointer;
+  margin-left: 4px;
+  margin-right: 16px;
+  padding: 0px;
+  border: 0px;
+  width: 24px;
+  height: 24px;
+}
+.email-form-saved-email {
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: $colorGrey900;
+  text-decoration: underline;
+}

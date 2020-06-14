@@ -4,6 +4,7 @@ import { cn } from "@bem-react/classname";
 import { getBreach } from "../../../utils/breaches";
 const cN = cn("breach-report");
 import "./report.scss";
+import { useMsg } from "../../../utils/hooks/msg";
 export const UrlChecker: React.FC<{ breaches: DataBreach[] }> = (props) => {
   const [breaches, setBreaches] = useState<DataBreach[]>([]);
 
@@ -16,7 +17,7 @@ export const UrlChecker: React.FC<{ breaches: DataBreach[] }> = (props) => {
   useEffect(() => {
     loadBreaches();
   }, [props.breaches]);
-  const msg = chrome.i18n.getMessage;
+  const msg = useMsg();
   const leakedFields = [
     ...new Set(breaches.map((breach) => breach.DataClasses).flat()),
   ];

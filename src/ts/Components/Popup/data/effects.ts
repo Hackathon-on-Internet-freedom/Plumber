@@ -6,16 +6,23 @@ import { stateToObject } from "../../../utils/dataUrilts";
 
 export const usePopupEffects = (stateObj: PopupState) => {
   useEffect(() => {
+    console.log("here", stateObj.domain);
     if (stateObj.domain) {
-      getDomainReports(stateObj.domain).then((res) => (stateObj.reports = res));
+      getDomainReports(stateObj.domain).then(res => {
+        console.log("res", res);
+        stateObj.reports = res;
+      });
     }
   }, [stateObj.domain]);
 
   useEffect(() => {
-    getSiteUrl().then((domain) => (stateObj.domain = domain));
+    getSiteUrl().then(domain => (stateObj.domain = domain));
     const retrivingItems = ["breaches", "hiddenBreaches", "email"] as const;
-    chrome.storage.local.get(retrivingItems, (items) => {
-      retrivingItems.forEach((element) => {
+    if (!chrome.storage) {
+      return;
+    }
+    chrome.storage.local.get(retrivingItems, items => {
+      retrivingItems.forEach(element => {
         if (element in items) {
           stateObj[element] = items[element];
         }
@@ -24,14 +31,22 @@ export const usePopupEffects = (stateObj: PopupState) => {
   }, []);
 
   useEffect(() => {
+    if (!stateObj.saveEmail) {
+      return;
+    }
+    if (!chrome.storage) {
+      return;
+    }
     chrome.storage.local.set({ hiddenBreaches: stateObj.hiddenBreaches });
   }, [stateObj.hiddenBreaches]);
 
   useEffect(() => {
+    if (stateObj.saveEmail && chrome.storage) {
+      chrome.storage.local.set({ email: stateObj.email });
+    }
     if (stateObj.email) {
       getBreachesByEmail(stateObj.email).then(
-        (breaches) =>
-          (stateObj.emailBreaches = breaches.map(({ Name }) => Name))
+        breaches => (stateObj.emailBreaches = breaches.map(({ Name }) => Name))
       );
     }
   }, [stateObj.email]);
